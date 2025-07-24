@@ -14,10 +14,11 @@ const container = (delay) => ({
 console.log(HERO_CONTENT.text);
 
 const profile_pic = '/assets/shubham-Photoroom-Photoroom (1).png';
+
 function Hero() {
     return (
         <>
-            <div  className=' border-b border-neutral-900'>
+            <div className=' border-b border-neutral-900'>
                 <div id="about" className=' lg:pt-4 px-2 lg:h-[75vh] '>
                     <div className=' text-center md:text-start flex flex-wrap justify-center lg:justify-between items-center flex-col-reverse lg:flex-row'>
 
@@ -36,12 +37,20 @@ function Hero() {
                                 animate="visible"
                                 className=" flex tracking-tighter font-light my-2 py-3 max-w-xl">{HERO_CONTENT.text}</motion.p>
 
-                            <motion.button 
+                            <motion.button
                                 variants={container(1)}
                                 initial="hidden"
                                 animate="visible"
                                 whileHover={{ scale: 1.1 }}
-                                className=" border border-white hover:shadow-purple-500 px-14 py-4 text-[20px] font-bold bg-gradient-to-r from-purple-400 via-purple-600 to-purple-900 rounded-full hover:scale-110 hover:transition-all ease-out duration-150">Check Resume</motion.button>
+                                className=" border border-white hover:shadow-purple-500 px-14 py-4 text-[20px] font-bold bg-gradient-to-r from-purple-400 via-purple-600 to-purple-900 rounded-full hover:scale-110 hover:transition-all ease-out duration-150">
+                                <a
+                                    href="https://drive.google.com/file/d/1JSfBXlFiAFiJ2M5p1R8aqowDCogoGw4a/view?usp=sharing"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Check Resume
+                                </a>
+                            </motion.button>
 
                         </div>
                         <div className="  lg:pr-16  px-4">

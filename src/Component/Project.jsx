@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { PROJECTS } from '../constants'
 import { useEffect, useRef, useState } from "react";
 import Model from "./Model";
+import Image from 'next/image';
 
 
 function Project({ sideMenuOpen }) {
@@ -58,13 +59,20 @@ function Project({ sideMenuOpen }) {
                 {PROJECTS.map((project) => (
 
                     <motion.div whileInView={{ opacity: 1, x: 0 }}
-                        initial={{ opacity: 0, x:project.x }}
+                        initial={{ opacity: 0, x: project.x }}
                         viewport={{ once: true }}
                         whileHover={{ translateY: -10 }}
                         transition={{ duration: 1 }} key={project.title} style={{ backgroundColor: "#171721 " }} onClick={() => toggleOn(project.title)}
                         className='rounded-xl border border-gray-800  lg:px-5 px-2 py-5 h-[490px] w-[330px]  hover:translate-y-[-10px] hover:shadow-[0_0_10px_rgba(75,20,130,0.8)] hover:brightness-110 transition-all duration-500 ease-out overflow-hidden cursor-pointer '>
 
-                        <img src={project.image} alt="" className=' rounded-xl h-[180px]  w-[100%] object-cover bg-white ' />
+                        {/* <img src={project.image} alt="" className=' rounded-xl h-[180px]  w-[100%] object-cover bg-white ' /> */}
+                        <Image
+                            height='100'
+                            width='100'
+                            src={project.image}
+                            alt={project.image}
+                            className=' rounded-xl h-[180px]  w-[100%] object-cover bg-black '
+                        />
                         <div className=' flex flex-wrap px-1 pt-1 justify-start items-center mt-3 gap-2'>
                             {project.technologies.map((tech) => (
                                 <p key={tech} className=' text-purple-500 text-[14px] font-semibold bg-[#201b31] rounded-full px-[10px]'>{tech}</p>

@@ -5,13 +5,13 @@ import Hero from "@/Component/Hero";
 import Navbar from "@/Component/Navbar";
 import Project from "@/Component/Project";
 import Skill from "@/Component/Skill";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
   const [sideMenuOpen, setsideMenuOpen] = useState(false)
   return (
     <>
+    
       <div className=" class text-neutral-300 selection:bg-white selection:text-black  ">
 
         <div className=" fixed top-0 -z-10 h-full w-full overflow-x-hidden">

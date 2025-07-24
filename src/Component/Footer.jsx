@@ -38,19 +38,12 @@ function Footer() {
           <FaLinkedin className=" cursor-pointer hover:text-blue-500 hover:duration-300 duration-300 hover:bg-white rounded-lg" />
         </a>
 
-        <a href="https://x.com/_shubham_9208" target="_blank" rel="noreferre">
-
-          <FaXTwitter className=" cursor-pointer hover:scale-125 hover:duration-300 duration-300" />
-        </a>
-        <a href="https://www.instagram.com/__shubham_km/" target="_blank" rel="noreferre">
-
-          <FaInstagram className=" cursor-pointer hover:text-pink-500 hover:duration-300 duration-300" />
-        </a>
+        
       </div>
       <div className=" flex justify-center items-center gap-2 lg:text-[17px] text-[16px]">
 
         <p><FaRegCopyright /></p>
-        <p> 2024 Shubham Maurya. All rights reserved.</p>
+        <p> Shubham Maurya. All rights reserved.</p>
       </div>
     </motion.div>
 
