@@ -27,7 +27,7 @@ function Navbar({ sideMenuOpen, setsideMenuOpen, }) {
         <>
             <div className="  mb-10 md:mb-20 flex lg:flex-none items-center justify-between  py-4 px-6">
                 <div className=" flex flex-shrink-0 items-center">
-                    <h1 className=" flex items-center text-[25px] justify-center"><span className=" text-orange-400"><FaLessThan /></span>ShubDev <span className=" text-orange-400"
+                    <h1 className=" flex items-center text-red-500 text-[25px] justify-center"><span className=" text-orange-400"><FaLessThan /></span>ShubDev <span className=" text-orange-400"
                     ><FaGreaterThan /></span></h1>
                 </div>
                 <div className=" lg:block hidden">
