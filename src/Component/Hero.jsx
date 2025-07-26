@@ -30,7 +30,7 @@ function Hero() {
                                 variants={container(0.2)}
                                 initial="hidden"
                                 animate="visible"
-                                className=' bg-gradient-to-r from-blue-400 via-slate-400 to-purple-500 bg-clip-text text-transparent text-3xl font-bold tracking-tight'> Front-End Developer</motion.span>
+                                className=' bg-gradient-to-r from-white via-slate-400 to-orange-500 bg-clip-text text-transparent text-3xl font-bold tracking-tight'> Front-End Developer</motion.span>
                             <motion.p
                                 variants={container(0.5)}
                                 initial="hidden"
@@ -42,7 +42,7 @@ function Hero() {
                                 initial="hidden"
                                 animate="visible"
                                 whileHover={{ scale: 1.1 }}
-                                className=" border border-white hover:shadow-purple-500 px-14 py-4 text-[20px] font-bold bg-gradient-to-r from-purple-400 via-purple-600 to-purple-900 rounded-full hover:scale-110 hover:transition-all ease-out duration-150">
+                                className=" border border-white hover:shadow-purple-500 px-14 py-4 text-[20px] font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-700 rounded-full hover:scale-110 hover:transition-all ease-out duration-150">
                                 <a
                                     href="https://drive.google.com/file/d/1JSfBXlFiAFiJ2M5p1R8aqowDCogoGw4a/view?usp=sharing"
                                     target="_blank"
@@ -58,7 +58,7 @@ function Hero() {
                                 initial={{ x: 100, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1, }}
-                                src={profile_pic} alt="profile_pic" width='400px' className=" rounded-full  opacity-80 shadow-md  shadow-purple-700" />
+                                src={profile_pic} alt="profile_pic" width='400px' className=" rounded-full  opacity-80 shadow-md  shadow-orange-400" />
                         </div>
 
                     </div>

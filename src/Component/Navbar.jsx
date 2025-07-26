@@ -27,7 +27,7 @@ function Navbar({ sideMenuOpen, setsideMenuOpen, }) {
         <>
             <div className="  mb-10 md:mb-20 flex lg:flex-none items-center justify-between  py-4 px-6">
                 <div className=" flex flex-shrink-0 items-center">
-                    <h1 className=" flex items-center text-[25px] justify-center"><span className=" text-purple-700"><FaLessThan /></span>ShubDev <span className=" text-purple-800"
+                    <h1 className=" flex items-center text-[25px] justify-center"><span className=" text-orange-400"><FaLessThan /></span>ShubDev <span className=" text-orange-400"
                     ><FaGreaterThan /></span></h1>
                 </div>
                 <div className=" lg:block hidden">
@@ -48,7 +48,7 @@ function Navbar({ sideMenuOpen, setsideMenuOpen, }) {
                 <div className=" lg:block hidden">
                     <a href="https://github.com/shubham-9208" target="_blank" rel="noreferre">
 
-                        <button className=" px-7 py-3 border border-purple-500 bg-transparent rounded-3xl text-lg hover:bg-purple-500 hover:duration-500 duration-300 hover:text-white text-purple-500 "> Github Profile</button>
+                        <button className=" px-7 py-3 border border-orange-400 bg-transparent rounded-3xl text-lg hover:bg-orange-400 hover:duration-500 duration-300 hover:text-white text-orange-400 "> Github Profile</button>
                     </a>
                 </div>
                 <GiHamburgerMenu onClick={menuOpen} className=" lg:hidden block text-[28px]" />

@@ -17,8 +17,8 @@ function Footer() {
     viewport={{ once: true }}
     transition={{ duration: 1.2 }}
     className=' lg:m-10 m-5 flex flex-col flex-wrap justify-center items-center'>
-      <div className=' m-4'><h1 className=' text-purple-500 text-xl font-semibold'>Shubham Maurya</h1></div>
-      <div className='  flex flex-wrap lg:gap-10 gap-5 hover:transition-all duration-500 ease-out hover:text-purple-500 cursor-pointer'>
+      <div className=' m-4'><h1 className=' text-orange-400 text-xl font-semibold'>Shubham Maurya</h1></div>
+      <div className='  flex flex-wrap lg:gap-10 gap-5 hover:transition-all duration-500 ease-out hover:text-orange-400 cursor-pointer'>
         {pageList.map((page) => (
 
           <Link key={page.scrol} to={page.scrol} spy={true}

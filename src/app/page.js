@@ -3,6 +3,7 @@ import Contact from "@/Component/Contact";
 import Footer from "@/Component/Footer";
 import Hero from "@/Component/Hero";
 import Navbar from "@/Component/Navbar";
+import Progressbar from "@/Component/Progressbar";
 import Project from "@/Component/Project";
 import Skill from "@/Component/Skill";
 import { useState } from "react";
@@ -11,7 +12,7 @@ export default function Home() {
   const [sideMenuOpen, setsideMenuOpen] = useState(false)
   return (
     <>
-    
+    <Progressbar/>
       <div className=" class text-neutral-300 selection:bg-white selection:text-black  ">
 
         <div className=" fixed top-0 -z-10 h-full w-full overflow-x-hidden">

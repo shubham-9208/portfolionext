@@ -1,13 +1,7 @@
 
 
 
-// import project1 from '/assets/EnhanceAi.png'
-// import project2 from '/assets/streaming.png'
-// import project3 from '/assets/Currency.png'
-// import project4 from '/assets/password.png'
-// import project5 from '/assets/food.png'
-// import project6 from '/assets/todo.png'
-// import project7 from '/assets/image.png'
+
 const project1 = '/assets/Ai.png';
 const project2 = '/assets/streaming.png';
 const project3 = '/assets/Currency.png';

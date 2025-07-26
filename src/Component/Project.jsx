@@ -1,5 +1,5 @@
+'use client'
 import { motion } from "framer-motion"
-
 import { PROJECTS } from '../constants'
 import { useEffect, useRef, useState } from "react";
 import Model from "./Model";
