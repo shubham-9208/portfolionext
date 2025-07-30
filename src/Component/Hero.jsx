@@ -13,7 +13,7 @@ const container = (delay) => ({
 
 console.log(HERO_CONTENT.text);
 
-const profile_pic = '/assets/shubham-Photoroom-Photoroom (1).png';
+const profile_pic = '/assets/WhatsApp_Image_2024-09-11_at_19.00.52_6fb6f2da-removebg-preview.png';
 
 function Hero() {
     return (
@@ -58,7 +58,7 @@ function Hero() {
                                 initial={{ x: 100, opacity: 0 }}
                                 animate={{ x: 0, opacity: 1 }}
                                 transition={{ duration: 1, }}
-                                src={profile_pic} alt="profile_pic" width='400px' className=" rounded-full  opacity-80 shadow-md  shadow-orange-400" />
+                                src={profile_pic} alt="profile_pic" className=" rounded-2xl  opacity-80 shadow-md  shadow-orange-400" />
                         </div>
 
                     </div>

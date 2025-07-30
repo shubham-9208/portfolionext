@@ -4,17 +4,23 @@ import { RxCross1 } from 'react-icons/rx'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaXTwitter } from "react-icons/fa6";
 import { Link } from 'react-scroll'
+import { FiHome } from "react-icons/fi";
+import { FaRegFolder } from "react-icons/fa6";
+import { PiSuitcaseBold } from "react-icons/pi";
+import { TbTool } from "react-icons/tb";
 
+import gsap from "gsap";
 
 import { motion } from 'framer-motion';
+import TooltipIcon from "./TooltipIcon";
 
 
-function Navbar({ sideMenuOpen, setsideMenuOpen, }) {
+function Navbar({ sideMenuOpen, setsideMenuOpen, curser }) {
 
-    const pageList = [{ p: ' About', scrol: 'about' },
-    { p: 'Skill', scrol: 'skill' },
-    { p: 'Project', scrol: 'project' },
-    { p: 'Contact', scrol: 'contact' }];
+    const pageList = [{ icon: FiHome, scrol: 'about', label: 'Home' },
+    { icon: FaRegFolder, scrol: 'skill', label: 'project' },
+    { icon: PiSuitcaseBold, scrol: 'project', label: 'Experience' },
+    { icon: TbTool, scrol: 'contact', label: 'skills' }];
 
 
 
@@ -24,31 +30,50 @@ function Navbar({ sideMenuOpen, setsideMenuOpen, }) {
 
 
     return (
-        <>
-            <div className="  mb-10 md:mb-20 flex lg:flex-none items-center justify-between  py-4 px-6">
-                <div className=" flex flex-shrink-0 items-center">
-                    <h1 className=" flex items-center text-red-500 text-[25px] justify-center"><span className=" text-orange-400"><FaLessThan /></span>ShubDev <span className=" text-orange-400"
+        <div className=" fixed top-0 left-0 right-0 z-30">
+            <div className=" h-full flex items-center justify-between px-[30px]">
+                <div className=" flex flex-shrink-0 items-center pt-4">
+                    <h1 className=" flex items-center text-[25px] justify-center"><span className=" text-orange-400"><FaLessThan /></span>ShubDev <span className=" text-orange-400"
                     ><FaGreaterThan /></span></h1>
                 </div>
-                <div className=" lg:block hidden">
-                    <div className='  flex flex-wrap lg:gap-10 gap-5 hover:transition-all duration-500 ease-out hover:text-purple-500 cursor-pointer '>
-                        {pageList.map((page) => (
+                <div className=" w-full h-full flex items-center justify-center backdrop-blur-xs pt-4">
+                    <div className=" lg:block hidden">
+                        <div
+                            style={{
+                                backgroundColor: 'rgb(28 26 25)'
+                            }}
+                            className=' rounded-2xl px-6 h-12 w-[250px] flex flex-wrap justify-center items-center gap-10 hover:transition-all duration-500 ease-out hover:text-orange-400 cursor-pointer  '>
+                            {pageList.map((page) => (
 
-                            <Link key={page.scrol} to={page.scrol} spy={true}
-                                smooth={true}
-                                offset={-50}
-                                duration={500}
+                                <Link key={page.scrol} to={page.scrol} spy={true}
+                                    smooth={true}
+                                    offset={-50}
+                                    duration={500}
+                                    onMouseEnter={() => {
+                                        gsap.to(curser.current, {
+                                            scale: 3,
+                                            color: 'white'
+                                        })
+                                    }}
+                                    onMouseLeave={() => {
+                                        gsap.to(curser.current, {
+                                            scale: 1,
+                                        })
+                                    }}
+                                    className="  hover:transition-all text-center duration-500 ease-out hover:text-white text-xl font-medium z-50">
+                                    {page.icon && (
+                                        <TooltipIcon key={page.label} icon={page.icon} label={page.label} />)}
+                                </Link>
+                            ))}
 
-                                className="  hover:transition-all duration-500 ease-out hover:text-purple-50 text-xl font-medium my-4">{page.p}
-                            </Link>
-                        ))}
-
+                        </div>
                     </div>
                 </div>
+
                 <div className=" lg:block hidden">
                     <a href="https://github.com/shubham-9208" target="_blank" rel="noreferre">
 
-                        <button className=" px-7 py-3 border border-orange-400 bg-transparent rounded-3xl text-lg hover:bg-orange-400 hover:duration-500 duration-300 hover:text-white text-orange-400 "> Github Profile</button>
+                        <button className=" px-7 py-3 border border-orange-400 bg-transparent rounded-3xl text-lg hover:bg-orange-400 hover:duration-500 duration-300 hover:text-white text-orange-400 text-nowrap "> Github Profile</button>
                     </a>
                 </div>
                 <GiHamburgerMenu onClick={menuOpen} className=" lg:hidden block text-[28px]" />
@@ -97,7 +122,7 @@ function Navbar({ sideMenuOpen, setsideMenuOpen, }) {
                     </div>
                 </div>
             </motion.div>}
-        </>
+        </div>
     )
 }
 
